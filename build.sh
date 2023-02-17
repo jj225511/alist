@@ -54,7 +54,7 @@ BuildWinArm64() {
 
 BuildDev() {
   rm -rf .git/
-  xgo -targets=linux/amd64,windows/amd64,darwin/amd64 -out "$appName" -ldflags="$ldflags" -tags=jsoniter .
+  xgo -targets=linux/arm64,linux/amd64,windows/amd64,darwin/amd64 -out "$appName" -ldflags="$ldflags" -tags=jsoniter .
   mkdir -p "dist"
   mv alist-* dist
   cd dist
