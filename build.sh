@@ -52,6 +52,7 @@ BuildWinArm64() {
   go build -o "$1" -ldflags="$ldflags" -tags=jsoniter .
 }
 
+
 BuildDev() {
   rm -rf .git/
   xgo -targets=linux/arm64,linux/amd64,windows/amd64,darwin/amd64 -out "$appName" -ldflags="$ldflags" -tags=jsoniter .
